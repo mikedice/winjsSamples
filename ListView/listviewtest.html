@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>listview test</title>
+    <link href="listviewtest.css" rel="stylesheet" />
+    <link href="C:\Users\mikedice\Documents\Repos\winjs\bin\Microsoft.Phone.WinJS.2.1\css\ui-dark.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Simple template for the ListView instantiation  -->
+    <div id="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+        <div class="smallListIconTextItem">
+            <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
+            <div class="smallListIconTextItem-Detail">
+                <h4 data-win-bind="textContent: title"></h4>
+                <h6 data-win-bind="textContent: text"></h6>
+            </div>
+        </div>
+    </div>
+
+    <h1>ListView test sample</h1>
+    <h2>Hover over the list and you'll see the scroll bar</h2>
+    <h3>Doesn't work in Chrome. There a bug on the winjs github about this.</h3>
+    <!-- The declarative markup necesary for ListView instantiation -->
+    <!-- Call WinJS.UI.processAll() in your initialization code -->
+    <div id="listView"
+         class="win-selectionstylefilled"
+         data-win-control="WinJS.UI.ListView"
+         data-win-options="{
+            itemDataSource: Sample.ListView.data.dataSource,
+            itemTemplate: smallListIconTextTemplate,
+            selectionMode: 'none',
+            tapBehavior: 'none',
+            swipeBehavior: 'none',
+            layout: { type: WinJS.UI.ListLayout }
+    }">
+    </div>
+
+
+    <script src="C:\Users\mikedice\Documents\Repos\winjs\bin\Microsoft.Phone.WinJS.2.1\js\base.js"></script>
+    <script src="C:\Users\mikedice\Documents\Repos\winjs\bin\Microsoft.Phone.WinJS.2.1\js\ui.js"></script>
+    <script src="C:\Users\mikedice\Documents\Repos\winjs\bin\Microsoft.Phone.WinJS.2.1\js\en-US\base.strings.js"></script>
+    <script src="C:\Users\mikedice\Documents\Repos\winjs\bin\Microsoft.Phone.WinJS.2.1\js\en-US\ui.strings.js"></script>
+    <script src="listviewtest.js" type="text/javascript"></script>
+</body>
+</html>
